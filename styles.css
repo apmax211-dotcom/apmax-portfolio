@@ -634,6 +634,53 @@ main {
   margin-top: 24px;
 }
 
+.case-snapshot {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.case-snapshot div,
+.result-item {
+  padding: 22px;
+  border: 1px solid rgba(173, 226, 255, 0.1);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(14, 24, 39, 0.78), rgba(9, 16, 28, 0.72));
+  box-shadow: var(--shadow);
+}
+
+.case-snapshot h2 {
+  margin: 10px 0;
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+.case-snapshot p,
+.result-item p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.result-item span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(59, 227, 143, 0.12);
+  color: #b8ffd7;
+  font-weight: 800;
+  border: 1px solid rgba(86, 240, 166, 0.14);
+}
+
 .case-story {
   display: grid;
   grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.2fr);
@@ -672,8 +719,69 @@ main {
 }
 
 .case-summary,
-.case-reflection {
+.case-reflection,
+.problem-statement,
+.target-users,
+.testing-results,
+.design-response,
+.prototype-comparison,
+.next-steps {
   border-color: rgba(59, 227, 143, 0.16);
+}
+
+.user-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.user-chip-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  color: #dceaff;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(173, 226, 255, 0.1);
+  font-weight: 800;
+}
+
+.response-grid,
+.prototype-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.response-grid div,
+.prototype-grid div {
+  padding: 20px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(173, 226, 255, 0.1);
+}
+
+.response-grid h3,
+.prototype-grid h3,
+.result-item h3 {
+  margin: 12px 0 8px;
+}
+
+.response-grid p,
+.prototype-grid p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.prototype-grid span {
+  color: #8de8b3;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
 }
 
 .achievement-list {
@@ -817,7 +925,11 @@ main {
   .split-layout,
   .card-grid,
   .achievement-list,
-  .case-story {
+  .case-story,
+  .case-snapshot,
+  .results-grid,
+  .response-grid,
+  .prototype-grid {
     grid-template-columns: 1fr;
   }
 
